@@ -56,7 +56,7 @@ STATIC const mp_rom_map_elem_t board_module_globals_table[] = {
 
     // MicroMod USB device pins
     // USB device is always used internally by CircuitPython, so skip creating
-    // the pin objects for it. See explicit ignores in mpconfigboard.h.
+    // the pin objects for it.
     // { MP_ROM_QSTR(MP_QSTR_USB_DM), MP_ROM_PTR(&pin_PA11) },    // MicroMod USB_D- (PA11)
     // { MP_ROM_QSTR(MP_QSTR_USB_DP), MP_ROM_PTR(&pin_PA12) },    // MicroMod USB_D+ (PA12)
 
