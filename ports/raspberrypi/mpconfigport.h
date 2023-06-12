@@ -52,10 +52,10 @@
 #include "py/circuitpy_mpconfig.h"
 
 #define MICROPY_PORT_ROOT_POINTERS \
-    mp_obj_t counting[NUM_PWM_SLICES]; \
-    mp_obj_t playing_audio[NUM_DMA_CHANNELS]; \
-    mp_obj_t background_pio[NUM_DMA_CHANNELS]; \
-    CIRCUITPY_COMMON_ROOT_POINTERS;
+        mp_obj_t counting[NUM_PWM_SLICES]; \
+        mp_obj_t playing_audio[NUM_DMA_CHANNELS]; \
+        mp_obj_t background_pio[NUM_DMA_CHANNELS]; \
+        CIRCUITPY_COMMON_ROOT_POINTERS;
 
 #if CIRCUITPY_CYW43
 #include "pico/cyw43_arch.h"
@@ -63,5 +63,7 @@
 #define MICROPY_PY_LWIP_REENTER MICROPY_PY_LWIP_ENTER
 #define MICROPY_PY_LWIP_EXIT    cyw43_arch_lwip_end();
 #endif
+
+#define MICROPY_PY_UCTYPES          (1)
 
 #endif  // __INCLUDED_MPCONFIGPORT_H
